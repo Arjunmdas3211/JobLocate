@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 import { Buttons } from "./src/components/atoms";
+import {Maps} from "./src/components/atoms/Maps";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Buttons title="hello" />
+        <Maps />
+      <Buttons title='Search This Location' onPress={() => alert("hello")}/>
       <StatusBar style="auto" />
     </View>
   );
@@ -14,9 +16,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: Platform.OS === 'ios' ? 0 : 24
   },
 });
