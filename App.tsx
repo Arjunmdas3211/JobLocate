@@ -1,21 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-import { Buttons } from "./src/components/atoms";
-import {Maps} from "./src/components/atoms/Maps";
+import {NavigationContainer} from "@react-navigation/native";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+
+import {Home,Jobs} from "./src/pages";
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-        <Maps />
-      <Buttons title='Search This Location' onPress={() => alert("hello")}/>
-      <StatusBar style="auto" />
-    </View>
+      <NavigationContainer>
+          <Tab.Navigator>
+              <Tab.Screen name="Home" component={Home} />
+              <Tab.Screen name="Jobs" component={Jobs} />
+          </Tab.Navigator>
+      </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    marginTop: Platform.OS === 'ios' ? 0 : 24
-  },
-});
+

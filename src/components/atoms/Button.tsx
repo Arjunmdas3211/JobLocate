@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     container: {
         flex:1,
         position: "absolute",
-        bottom: 80,
+        bottom: 140,
         marginLeft:100
     }
 });

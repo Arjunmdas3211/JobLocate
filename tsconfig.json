@@ -12,6 +12,9 @@
     "paths": {
       "atoms": [
         "src/components/atoms"
+      ],
+      "pages": [
+        "src/pages"
       ]
     }
   }

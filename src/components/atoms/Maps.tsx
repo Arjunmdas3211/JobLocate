@@ -5,7 +5,7 @@ import {Dimensions, View, StyleSheet} from "react-native";
 export const Maps: FC = () => {
     return(
         <View>
-        <MapView style={styles.map} />
+           <MapView style={styles.map} />
         </View>
     )
 }
